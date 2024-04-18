@@ -1,0 +1,153 @@
+#Задание 1.
+
+mkdir -p lab0/blissey3/kakuna lab0/blissey3/luxray lab0/blissey3/oddish
+
+mkdir -p lab0/gorebyss6/slowpoke lab0/gorebyss6/zweilous 
+
+mkdir -p lab0/leafeon9/zweilous lab0/leafeon9/clefairy lab0/leafeon9/tepig lab0/leafeon9/xatu
+
+echo 'Живет  Freshwater Ocean' > lab0/blissey3/sharpedo
+
+echo 'Возможности Overland=1' > lab0/blissey3/koffing
+
+echo 'Surface=1 Sky=6 Jump=2 Power1=0 Intelligence=3' >> lab0/blissey3/koffing 
+
+echo 'Возможности' > lab0/gorebyss6/volcarona
+
+echo 'Overland=7 Sky=8 Jump=3 Power=3 Intelligence=4 Firestarter=0 Heater=0' >> lab0/gorebyss6/volcarona
+
+echo 'Egg Warmer=0 Sinker=0' >> lab0/gorebyss6/volcarona
+
+echo 'Способности Confusion Disable Miracle' > lab0/kadabra7
+
+echo 'Eye Ally Switch Psybeam Reflect Telekinesis Recover' >> lab0/kadabra7
+
+echo 'Play Psychic Future Sight Trick' >> lab0/kadabra7
+
+echo 'weight=77.2 height=39.0 atk=6' > lab0/leafeon9/omastar
+
+echo 'def=13' >> lab0/leafeon9/omastar
+
+echo 'Тип покемона FIRE NONE'> lab0/magmar0
+
+echo 'Ходы After You' > lab0/slowking0
+
+echo 'Aqua Tail Avalanche Block Body Slam Brine Counter Dive Double-Edge' >> lab0/slowking0
+
+echo 'Drain Punch Dynamicpunch Focus Punch Foul Play Fury Cutter Hidden' >> lab0/slowking0
+
+echo 'Power ≠ Ice Punch Icy Wind Iron Defense Iron Tail Magic Coat Mega Kick' >> lab0/slowking0
+
+echo 'Beam Skill Swap Sleep Talk Snore Swift Trick Wonder Room Zen Headbutt' >> lab0/slowking0
+
+#Задание 2.
+
+chmod u+rwx,g+rw-x,o+r-w-x lab0/blissey3 
+
+chmod 711 lab0/blissey3/kakuna
+
+chmod u+rw-x,g-rwx,o+r-wx lab0/blissey3/sharpedo
+
+chmod 404 lab0/blissey3/koffing
+
+chmod u-r+wx,g+rw-x,o-rw+x lab0/blissey3/luxray
+
+chmod 315 lab0/blissey3/oddish
+
+chmod 571 lab0/gorebyss6
+
+chmod 750 lab0/gorebyss6/slowpoke
+
+chmod u-r+wx,g-rw+x,o-rw+x lab0/gorebyss6/zweilous
+
+chmod 624 lab0/gorebyss6/volcarona
+
+chmod 440 lab0/kadabra7
+
+chmod 577 lab0/leafeon9
+
+chmod 752 lab0/leafeon9/zweilous
+
+chmod u+rx-w,g-rx+w,o+r-wx lab0/leafeon9/clefairy
+
+chmod 700 lab0/leafeon9/tepig
+
+chmod 004 lab0/leafeon9/omastar
+
+chmod 711 lab0/leafeon9/xatu
+
+chmod 440 lab0/magmar0
+
+chmod 620 lab0/slowking0
+
+#Задание 3.
+
+ln -s /home/studs/s367900/lab0/leafeon9 lab0/Copy4 
+
+chmod 777 lab0/leafeon9
+
+chmod 700 lab0/gorebyss6/zweilous
+
+cp /home/studs/s367900/lab0/slowking0 lab0/leafeon9/omastarslowking
+
+cp -r /home/studs/s367900/lab0/gorebyss6 lab0/blissey3/oddish
+
+cp /home/studs/s367900/lab0/magmar0 lab0/leafeon9/xatu
+
+cat lab0/gorebyss6/volcarona lab0/blissey3/sharpedo > lab0/magmar0_14
+
+ln /home/studs/s367900/lab0/magmar0 lab0/leafeon9/omastarmagmar
+
+ln -s /home/studs/s367900/lab0/slowking0 lab0/blissey3/sharpedoslowking
+
+#Задание 4.
+
+wc -m lab0/*/*0 lab0/*0  2>&1 | sort -r
+
+ls -1 lab0/leafeon9 2>/dev/null | sort
+
+cat lab0/slowking0 2>&1| grep -v Ju
+
+wc -m lab0/*/z* lab0/z*  2>&1 | sort -r
+
+ls -lR -tr lab0 2>&1 | grep -vE ':$|total|^$|^d' | tail -n 2
+
+wc -m lab0/kadabra7 2>&1  >/tmp/nedushite
+
+#Задание 5. 
+
+
+
+chmod 700 lab0/kadabra7
+
+rm lab0/kadabra7
+
+chmod 700 lab0/blissey3/koffing
+
+rm lab0/blissey3/koffing
+
+chmod 700 lab0/Copy*
+
+rm lab0/Copy*
+
+chmod 700 lab0/leafeon9/omastarmagm*
+
+rm lab0/leafeon9/omastarmagm*
+
+chmod 700 lab0/gorebyss6
+
+chmod 700 lab0/gorebyss6/*
+
+rm -rf lab0/gorebyss6
+
+chmod 700 lab0/blissey3/oddish
+
+chmod 700 lab0/blissey3/oddish/*
+
+rm -rf lab0/blissey3/oddish
+
+
+
+//cat >lab1
+вставить + enter
+./lab1 для запуска

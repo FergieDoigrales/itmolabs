@@ -1,0 +1,164 @@
+  ORG  0x000
+V0:  WORD  $DEFAULT, 0x180
+V1:  WORD  $DEFAULT, 0x180
+V2:  WORD  $INT2, 0x180
+V3:  WORD  $INT3, 0x180
+V4:  WORD  $DEFAULT, 0x180
+V5:  WORD  $DEFAULT, 0x180
+V6:  WORD  $DEFAULT, 0x180
+V7:  WORD  $DEFAULT, 0x180
+  ORG  0x01C
+X:  WORD  0x0000
+X_addr:  WORD   $X
+DEREF:   WORD  0x0000
+MIN:  WORD  0xFFEB
+MAX:  WORD  0x0015
+DEFAULT:  IRET  
+START:    
+  CLA  
+  OUT  0x1
+  OUT  0x3
+  OUT  0xB
+  OUT  0xD
+  OUT  0x11
+  OUT  0x15
+  OUT  0x19
+  OUT  0x1D
+
+  LD  #0xA
+  OUT  0x5
+  LD  #0xB
+  OUT  0x7
+
+  CLA  
+  PUSH  
+  EI  
+MAIN:  LD   X
+  ST  &1
+  SUB  #0x0002
+  CALL   CHECK
+  ST   X
+  ST   &0
+  PUSH  
+  PUSH  
+  PUSH  
+  LD   &3
+  ST  &2
+  LD  &4
+  ST  &1
+  LD  X_addr
+  ST  &0
+  CALL  CAS
+  BEQ   MAIN
+  JUMP  MAIN
+  
+INT2:  PUSH  
+  DI  
+  CLA  
+  IN  4
+  AND  X
+  AND   #0X1F
+  CALL   CHECK
+  ST  X
+  POP  
+  IRET
+INT3:  PUSH  
+  DI  
+  LD  X
+  CALL   CHECK
+  ST  X
+  ADD  X    ;AC=2X
+  ADD   X    ;AC=3X
+  ASL      ;AC=6X
+  NEG      ;AC=-6X
+  ADD   #1    ;AC=-6X+1
+  OUT  6
+  POP  
+  IRET  
+CHECK:    
+CHECK_MIN:  CMP  MIN
+  BPL  CHECK_MAX
+  JUMP  LD_MAX
+CHECK_MAX:  CMP  MAX
+  BMI  RETURN
+LD_MAX:  LD  MAX
+RETURN:  RET  
+CAS:  PUSHF  
+  DI  
+  LD  &2
+  ST   DEREF
+  LD   (DEREF)
+  CMP   &3
+  BEQ  THEN
+  JUMP  ELSE
+THEN:  LD&4  
+  ST  (DEREF)
+  LD  #1
+  JUMP  EXIT
+ELSE:  CLA  
+  JUMP  EXIT
+EXIT:  POPF  
+  SWAP  
+  ST  &3
+  SWAP  
+  SWAP  
+  POP  
+  SWAP  
+  POP  
+  SWAP  
+  POP  
+  RET
+
+
+----
+
+ORG 0x200
+RES: WORD 0x400
+STOPSYM: word 0x030
+KEY: WORD 0x00
+LOCATION: WORD 0x400
+TEMP: WORD 0x0000
+MASK: WORD 0x00FF
+B: WORD 0x00C0
+START: CLA
+RKEY: IN 0x019
+    AND #0x40
+    BEQ RKEY
+    IN  0x018
+    AND MASK
+    ST KEY
+S1: CLA
+    IN 0x019
+    AND #0x40
+    BEQ S1
+    IN  0x018
+    ST (RES)+
+    CMP STOPSYM
+    BEQ O1
+    JUMP S1
+ O1:
+    IN 0xD
+    AND #0x40
+    BEQ O1
+    LD (LOCATION)+
+    CMP STOPSYM
+    BEQ FINISH
+SUB B
+PUSH
+NOT
+AND KEY
+PUSH
+LD KEY
+NOT
+AND &1
+OR &0
+SWAP
+POP
+SWAP
+POP
+    OUT 0xC
+    JUMP O1
+ FINISH: HLT
+
+
+ву-7

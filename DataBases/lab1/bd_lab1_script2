@@ -1,0 +1,29 @@
+INSERT INTO Person (person_id, person_name) VALUES (DEFAULT, 'Диаспар');
+INSERT INTO Person (person_id, person_name) VALUES (DEFAULT, 'Олвин');
+INSERT INTO Person (person_id, person_name) VALUES (DEFAULT, 'Джизирак');
+INSERT INTO Person (person_id, person_name) VALUES (DEFAULT, 'Эристон');
+INSERT INTO Person (person_id, person_name) VALUES (DEFAULT, 'Итания');
+INSERT INTO Person (person_id, person_name) VALUES (DEFAULT, 'Алистра');
+INSERT INTO Locations (location_id, location_name) VALUES (DEFAULT, 'границы города');
+INSERT INTO Locations (location_id, location_name) VALUES (DEFAULT, 'Зал Света');
+INSERT INTO Locations (location_id, location_name) VALUES (DEFAULT, 'там');
+INSERT INTO Locations (location_id, location_name) VALUES (DEFAULT, 'комната Олвина');
+
+INSERT INTO Accident (accident_id, accident_name, location_id, person_id) VALUES (DEFAULT, '(не) какая-нибудь беда', 2, 1);
+
+INSERT INTO Action (action_id, action_type, person_id, location_id) VALUES (DEFAULT, 'не видеть Олвина', 0, 0);
+INSERT INTO Action (action_id, action_type, person_id, location_id) VALUES (DEFAULT, 'испытал облегчение', 2, 2);
+INSERT INTO Action (action_id, action_type, person_id, location_id) VALUES (DEFAULT, 'проводит все свое время', 1, 1);
+INSERT INTO Action (action_id, action_type, person_id, location_id) VALUES (DEFAULT, 'полагал', 2, 2);
+INSERT INTO Action (action_id, action_type, person_id, location_id) VALUES (DEFAULT, 'навестил(а)', 3, 3);
+INSERT INTO Action (action_id, action_type, person_id, location_id) VALUES (DEFAULT, 'навестил(а)', 4, 3);
+INSERT INTO Action (action_id, action_type, person_id, location_id) VALUES (DEFAULT, 'убедился', 3, 2);
+INSERT INTO Action (action_id, action_type, person_id, location_id) VALUES (DEFAULT, 'убедилась', 4, 2);
+INSERT INTO Action (action_id, action_type, person_id, location_id) VALUES (DEFAULT, 'не придал значения', 3, 2);
+INSERT INTO Action (action_id, action_type, person_id, location_id) VALUES (DEFAULT, 'оказалась более настойчивой', 5, 2);
+
+INSERT INTO Relationship (relationship_id, relationship_type, person1_id, person2_id) VALUES (DEFAULT, 'наставник-ученик'), 2, 1;
+INSERT INTO Relationship (relationship_id, relationship_type, person1_id, person2_id) VALUES (DEFAULT, 'муж-жена'), 3, 4;
+INSERT INTO Relationship (relationship_id, relationship_type, person1_id, person2_id) VALUES (DEFAULT, 'мать-сын'), 4, 1;
+INSERT INTO Relationship (relationship_id, relationship_type, person1_id, person2_id) VALUES (DEFAULT, 'отец-сын'), 3, 1;
+INSERT INTO Relationship (relationship_id, relationship_type, person1_id, person2_id) VALUES (DEFAULT, 'чужая тетка'), 5, 1;

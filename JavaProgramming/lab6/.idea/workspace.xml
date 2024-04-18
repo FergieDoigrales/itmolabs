@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8b44efd9-b455-4b29-b81c-ea25e539375e" name="Changes" comment="final fixes">
+      <change afterPath="$PROJECT_DIR$/src/main/script2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jar/lab6server-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jar/lab6server-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/letsgo/lab6/client/ClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/letsgo/lab6/client/ClientMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/letsgo/lab6/server/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/letsgo/lab6/server/ServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/movies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/movies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/todo.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2VXJgAuSeOUdaRaEe7hP5kb5fS8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "jbr-17",
+    "last_opened_file_path": "K:/Dev/jdk-21",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="K:\Dev\Projects\Fergie-Lab6\src\main" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.Fergie-Lab6 [clientBuild]">
+    <configuration name="Fergie-Lab6 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Fergie-Lab6 [clientBuild]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clientBuild" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Fergie-Lab6 [serverBuild]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="serverBuild" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Fergie-Lab6 [clientBuild]" />
+        <item itemvalue="Gradle.Fergie-Lab6 [serverBuild]" />
+        <item itemvalue="Gradle.Fergie-Lab6 [build]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b44efd9-b455-4b29-b81c-ea25e539375e" name="Changes" comment="" />
+      <created>1694976601150</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694976601150</updated>
+      <workItem from="1694976602228" duration="5964000" />
+      <workItem from="1694982702409" duration="16000" />
+      <workItem from="1695022941269" duration="2722000" />
+      <workItem from="1695039431041" duration="5236000" />
+      <workItem from="1695063772634" duration="4249000" />
+      <workItem from="1695068650899" duration="1583000" />
+      <workItem from="1695108341124" duration="13451000" />
+      <workItem from="1695138261899" duration="616000" />
+      <workItem from="1695143080673" duration="2388000" />
+      <workItem from="1695146236663" duration="2399000" />
+      <workItem from="1695197838354" duration="28219000" />
+      <workItem from="1695287930000" duration="3811000" />
+      <workItem from="1695304909286" duration="6329000" />
+      <workItem from="1695311255375" duration="112000" />
+      <workItem from="1695311388795" duration="2627000" />
+      <workItem from="1695319766015" duration="5956000" />
+      <workItem from="1695328206618" duration="1978000" />
+      <workItem from="1695394114101" duration="5516000" />
+      <workItem from="1695401273875" duration="199000" />
+      <workItem from="1695401528680" duration="2000" />
+      <workItem from="1695401546616" duration="4849000" />
+      <workItem from="1695406444215" duration="2376000" />
+    </task>
+    <task id="LOCAL-00001" summary="setup">
+      <option name="closed" value="true" />
+      <created>1694976719512</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694976719512</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added models">
+      <option name="closed" value="true" />
+      <created>1694977992817</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694977992817</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added commands &amp; some of the managers, implementation of some commands">
+      <option name="closed" value="true" />
+      <created>1694982646130</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694982646130</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added implementation of some more commands">
+      <option name="closed" value="true" />
+      <created>1695025657190</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695025657190</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commands themselves are done, added EntityManager &amp; done some tweaks">
+      <option name="closed" value="true" />
+      <created>1695070202794</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695070202794</updated>
+    </task>
+    <task id="LOCAL-00006" summary="sorted everything into folders, created classes for future needs">
+      <option name="closed" value="true" />
+      <created>1695134085271</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695134085271</updated>
+    </task>
+    <task id="LOCAL-00007" summary="started working on user io">
+      <option name="closed" value="true" />
+      <created>1695138305216</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695138305216</updated>
+    </task>
+    <task id="LOCAL-00008" summary="moved logic of 'info-gathering' commands; made a todo; CommandManager now returns a String instead of a Response">
+      <option name="closed" value="true" />
+      <created>1695199708148</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695199708148</updated>
+    </task>
+    <task id="LOCAL-00009" summary="filled Constraints maps, split validator into Command &amp; Attributes, returned Command to an Interface">
+      <option name="closed" value="true" />
+      <created>1695209359658</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695209359658</updated>
+    </task>
+    <task id="LOCAL-00010" summary="literally deleted 2 rows">
+      <option name="closed" value="true" />
+      <created>1695209575928</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695209575928</updated>
+    </task>
+    <task id="LOCAL-00011" summary="validation &amp; full i/o ready">
+      <option name="closed" value="true" />
+      <created>1695241217409</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1695241217409</updated>
+    </task>
+    <task id="LOCAL-00012" summary="xml done">
+      <option name="closed" value="true" />
+      <created>1695319883605</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1695319883605</updated>
+    </task>
+    <task id="LOCAL-00013" summary="tcp connection">
+      <option name="closed" value="true" />
+      <created>1695330173957</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1695330173957</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fixes in EntityManager; added server i/o">
+      <option name="closed" value="true" />
+      <created>1695401213162</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1695401213162</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fixes in EntityManager; added server i/o (some error occurred so same commit)">
+      <option name="closed" value="true" />
+      <created>1695401633041</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1695401633042</updated>
+    </task>
+    <task id="LOCAL-00016" summary="execute_script ready">
+      <option name="closed" value="true" />
+      <created>1695406347242</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1695406347242</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="setup" />
+    <MESSAGE value="added models" />
+    <MESSAGE value="added commands &amp; some of the managers, implementation of some commands" />
+    <MESSAGE value="added implementation of some more commands" />
+    <MESSAGE value="commands themselves are done, added EntityManager &amp; done some tweaks" />
+    <MESSAGE value="sorted everything into folders, created classes for future needs" />
+    <MESSAGE value="started working on user io" />
+    <MESSAGE value="moved logic of 'info-gathering' commands; made a todo; CommandManager now returns a String instead of a Response" />
+    <MESSAGE value="filled Constraints maps, split validator into Command &amp; Attributes, returned Command to an Interface" />
+    <MESSAGE value="literally deleted 2 rows" />
+    <MESSAGE value="validation &amp; full i/o ready" />
+    <MESSAGE value="xml done" />
+    <MESSAGE value="tcp connection" />
+    <MESSAGE value="fixes in EntityManager; added server i/o" />
+    <MESSAGE value="fixes in EntityManager; added server i/o (some error occurred so same commit)" />
+    <MESSAGE value="execute_script ready" />
+    <MESSAGE value="final fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="final fixes" />
+  </component>
+</project>

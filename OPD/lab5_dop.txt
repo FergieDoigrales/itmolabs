@@ -1,0 +1,188 @@
+ORG 0x200
+RES: WORD 0x400
+STOPSYM: word 0x030
+KEY: WORD 0x00
+LOCATION: WORD 0x400
+TEMP: WORD 0x0000
+;MASK: WORD 0x001F
+START: CLA
+RKEY: IN 0x019
+    AND #0x40
+    BEQ RKEY
+    IN  0x018
+    ;AND MASK
+    ST KEY
+S1: CLA
+    IN 0x019
+    AND #0x40
+    BEQ S1
+    IN  0x018
+    ST (RES)+
+    CMP STOPSYM
+    BEQ O1
+    JUMP S1
+ O1:
+    IN 0xD
+    AND #0x40
+    BEQ O1
+    LD (LOCATION)+
+    CMP STOPSYM
+    BEQ FINISH
+    NOT
+    AND KEY
+    OUT 0xC
+    JUMP O1
+ FINISH: HLT
+
+
+ORG 0x200
+RES: WORD 0x400
+STOPSYM: word 0x030
+KEY: WORD 0x00
+LOCATION: WORD 0x400
+TEMP: WORD 0x0000
+;MASK: WORD 0x001F
+START: CLA
+RKEY: IN 0x019
+    AND #0x40
+    BEQ RKEY
+    IN  0x018
+    ;AND MASK
+    ST KEY
+S1: CLA
+    IN 0x019
+    AND #0x40
+    BEQ S1
+    IN  0x018
+    ST (RES)+
+    CMP STOPSYM
+    BEQ O1
+    JUMP S1
+ O1:
+    IN 0xD
+    AND #0x40
+    BEQ O1
+    LD (LOCATION)+
+    CMP STOPSYM
+    BEQ FINISH
+    SUB #0x80
+PUSH
+NEG
+AND KEY
+PUSH
+LD KEY
+NEG
+AND &0
+OR &1
+SWAP
+POP
+SWAP
+POP
+ADD #0x80
+    OUT 0xC
+    JUMP O1
+ FINISH: HLT
+
+
+ORG 0x000      ; Адрес начала программы
+finish: WORD 0x09   ; Стоп-клавиша  таб
+res: WORD 0x500  ; Ссылка на результат
+KEY: WORD 0x00
+START: CLA            ; Очистка аккумулятора
+RKEY: IN 0x19
+AND #0x40
+BEQ RKEY
+IN 0x18  
+ST KEY
+CLA
+s1: IN 0x19    ; Ожидание ввода символа
+AND #0x40  ; Проверка на наличие введенного символа
+BEQ s1          ; Нет - "Спин-луп"
+IN 0x18    ; Вывод байта в AC
+CMP finish  ; Проверяем на стоп-символ
+BEQ exit  ; Если стоп-символ - выход
+NOT
+AND KEY
+ST (res)  ; Сохраняем в память по ссылке
+LD (res)+  ; Инкрементируем ссылку на результат
+CLA        ; Очистка аккумулятора
+JUMP s1      ; Возвращаемся в начало цикла
+exit:   LD res    ; res ссылается на ячейку, где лежит стоп-символ
+INC
+ST res
+cur: WORD 0x500  ; Пробегаемся по всем символам в памяти и выводим их
+output: LD (cur)
+OUT 0xC
+LD cur
+INC
+ST cur
+CMP res
+BEQ end_
+JUMP output
+end_: HLT        ; Остановка программы
+
+;LD A
+NEG
+AND KEY
+PUSH
+LD KEY
+NEG
+AND res
+OR &0
+SWAP
+POP
+
+
+
+
+
+
+
+ласт: 
+ORG 0x200
+RES: WORD 0x400
+STOPSYM: word 0x030
+KEY: WORD 0x00
+LOCATION: WORD 0x400
+TEMP: WORD 0x0000
+MASK: WORD 0x00EE
+START: CLA
+RKEY: IN 0x019
+    AND #0x40
+    BEQ RKEY
+    IN  0x018
+    AND MASK
+    ST KEY
+S1: CLA
+    IN 0x019
+    AND #0x40
+    BEQ S1
+    IN  0x018
+    ST (RES)+
+    CMP STOPSYM
+    BEQ O1
+    JUMP S1
+ O1:
+    IN 0xD
+    AND #0x40
+    BEQ O1
+    LD (LOCATION)+
+    CMP STOPSYM
+    BEQ FINISH
+    SUB #0x80
+PUSH
+NEG
+AND KEY
+PUSH
+LD KEY
+NEG
+AND &0
+OR &1
+SWAP
+POP
+SWAP
+POP
+ADD #0x80
+    OUT 0xC
+    JUMP O1
+ FINISH: HLT

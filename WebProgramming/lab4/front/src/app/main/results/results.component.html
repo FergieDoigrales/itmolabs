@@ -1,0 +1,23 @@
+<table>
+  <thead class="tbl-header">
+  <th>X</th>
+  <th>Y</th>
+  <th>R</th>
+  <th class="hide">Дата?время?</th>
+  <th class="hide">Рантайм</th>
+  <th class="special-header">Результад</th>
+  </thead>
+  <tbody class="tbl-content">
+  <tr *ngFor='let result of results'>
+    <td>{{ result.x }}</td>
+    <td>{{ result.y }}</td>
+    <td>{{ result.r }}</td>
+    <td class="hide">{{ result.time }}</td>
+    <td class="hide">{{ result.execution }} мс</td>
+    <td>{{ result.result }}</td>
+  </tr>
+  </tbody>
+</table>
+<button (click)="refresh()">
+  Очитстить
+</button>

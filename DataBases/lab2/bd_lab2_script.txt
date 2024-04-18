@@ -1,0 +1,82 @@
+-----1------
+
+SELECT "Н_ТИПЫ_ВЕДОМОСТЕЙ"."НАИМЕНОВАНИЕ" FROM "Н_ТИПЫ_ВЕДОМОСТЕЙ" RIGHT JOIN "Н_ВЕДОМОСТИ" ON "Н_ТИПЫ_ВЕДОМОСТЕЙ"."ИД" = "Н_ВЕДОМОСТИ"."ТВ_ИД" WHERE "Н_ТИПЫ_ВЕДОМОСТЕЙ"."ИД" = 3 AND "Н_ВЕДОМОСТИ"."ЧЛВК_ИД" = 163249;
+
+-----2------
+
+SELECT "Н_ЛЮДИ"."ИМЯ", "Н_ОБУЧЕНИЯ"."ЧЛВК_ИД", "Н_УЧЕНИКИ"."ИД" FROM "Н_ЛЮДИ" 
+LEFT JOIN "Н_ОБУЧЕНИЯ" ON "Н_ОБУЧЕНИЯ"."ЧЛВК_ИД" = "Н_ЛЮДИ"."ИД" 
+LEFT JOIN "Н_УЧЕНИКИ" ON "Н_УЧЕНИКИ"."ВИД_ОБУЧ_ИД" = "Н_ОБУЧЕНИЯ"."ВИД_ОБУЧ_ИД"
+WHERE "Н_ЛЮДИ"."ОТЧЕСТВО" > 'Сергеевич' AND "Н_ОБУЧЕНИЯ"."НЗК" < '001000' AND "Н_УЧЕНИКИ"."ИД" < 150308;
+
+-----3------
+
+SELECT COUNT("Н_ЛЮДИ"."ИД") FROM "Н_ЛЮДИ" 
+JOIN "Н_УЧЕНИКИ" ON "Н_УЧЕНИКИ"."ЧЛВК_ИД" = "Н_ЛЮДИ"."ИД"
+WHERE "Н_УЧЕНИКИ"."ГРУППА" = '3102' AND "Н_ЛЮДИ"."ОТЧЕСТВО" ISNULL;
+
+-----4------
+
+select "ФАМИЛИЯ" as surname, count("ФАМИЛИЯ")
+from "Н_ЛЮДИ" as ppl join
+   (select studs."ЧЛВК_ИД" as person_id
+    from "Н_УЧЕНИКИ" as studs join
+       (select plans."ИД" as plan_id
+        from "Н_ПЛАНЫ" as plans join "Н_ФОРМЫ_ОБУЧЕНИЯ" as forms
+        on (plans."ФО_ИД" = forms."ИД" and
+        forms."НАИМЕНОВАНИЕ" = 'Очная')) fulltime_forms
+    on studs."ПЛАН_ИД" = fulltime_forms.plan_id) fulltime_studs
+on ppl."ИД" = fulltime_studs.person_id
+group by "ФАМИЛИЯ"
+having count("ФАМИЛИЯ") = 50;
+
+Вывод будет пустым, потому что нет ни одной фамилии на очной форме обучения, которая бы встречалась ровно 50 раз. Вместо "=" в последней строчке можно написать ">" или "<", тогда вывод не будет пустым.
+
+-----5------
+
+SELECT "Н_УЧЕНИКИ"."ГРУППА", avg(date_part('year', age("Н_ЛЮДИ"."ДАТА_РОЖДЕНИЯ"))) FROM "Н_ЛЮДИ"
+JOIN "Н_УЧЕНИКИ" ON "Н_УЧЕНИКИ"."ЧЛВК_ИД" = "Н_ЛЮДИ"."ИД"
+GROUP BY "Н_УЧЕНИКИ"."ГРУППА"
+HAVING avg(date_part('year', age("Н_ЛЮДИ"."ДАТА_РОЖДЕНИЯ"))) < (
+SELECT avg(date_part('year', age("Н_ЛЮДИ"."ДАТА_РОЖДЕНИЯ")))
+FROM "Н_ЛЮДИ"
+JOIN "Н_УЧЕНИКИ" ON "Н_УЧЕНИКИ"."ЧЛВК_ИД" = "Н_ЛЮДИ"."ИД"
+WHERE "Н_УЧЕНИКИ"."ГРУППА" = '1100');
+
+
+-----6-----
+
+select "ГРУППА" as "group", students."ИД" as id,
+       "ФАМИЛИЯ" as surname, "ИМЯ" as name, "ОТЧЕСТВО" as patronym,
+       "П_ПРКОК_ИД" as "order", "СОСТОЯНИЕ" as status
+from "Н_УЧЕНИКИ" as students join "Н_ЛЮДИ" as ppl
+    on (students."ЧЛВК_ИД" = ppl."ИД" and students."НАЧАЛО" < '2012-09-01' and students."ИД" in (
+        select studs."ИД" from "Н_УЧЕНИКИ" as studs join
+            (select plans."ИД" as plan_id from "Н_ПЛАНЫ" as plans join
+                (select naps."ИД" as nap_id
+                from "Н_НАПРАВЛЕНИЯ_СПЕЦИАЛ" as naps join "Н_НАПР_СПЕЦ" as ns
+                on (ns."ИД" = naps."НС_ИД" and ns."КОД_НАПРСПЕЦ" = '230101')) naps
+            on (plans."НАПС_ИД" = naps.nap_id) join "Н_ФОРМЫ_ОБУЧЕНИЯ" as forms
+        on (plans."ФО_ИД" = forms."ИД" and forms."НАИМЕНОВАНИЕ" = 'Очная')) plans
+    on (studs."ПЛАН_ИД" = plans.plan_id)));
+
+-----7-----
+
+select count(*) as number
+from (
+    select ppl."ИД" from "Н_ЛЮДИ" as ppl
+        where (ppl."ИД" in (
+            select "ЧЛВК_ИД" from "Н_ВЕДОМОСТИ" veds
+                where (veds."ОЦЕНКА" = '3')
+            ) and ppl."ИД" not in (
+                select "ЧЛВК_ИД" from "Н_ВЕДОМОСТИ" veds
+                    where (veds."ОЦЕНКА" in ('2', 'незач'))
+            ))
+     ) troykers;
+
+Вот этот кусок:
+and ppl."ИД" not in (
+    select "ЧЛВК_ИД" from "Н_ВЕДОМОСТИ" veds
+        where (veds."ОЦЕНКА" in ('2', 'незач'))
+нужен для того, чтобы исключить из запроса двоечников
+

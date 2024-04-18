@@ -1,0 +1,31 @@
+/*Результаты*/
+
+.results {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#result-table {
+    border-collapse: collapse;
+    background-color: #f8e0e0;
+    border-radius: 10px;
+    padding: 5px 3px;
+}
+
+.results .table-header {
+    color: black;
+}
+.results .table-header > th {
+    padding: 5px;
+    font-weight: 400;
+}
+
+/*один из стилей применится к строке таблицы, в зависимости от того, какой класс вырнет сервер*/
+.results .table-response-right {
+    color: #e94779;
+}
+.results .table-response-wrong {
+    color: white;
+}

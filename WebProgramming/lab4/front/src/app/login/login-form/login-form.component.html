@@ -1,0 +1,48 @@
+<form (ngSubmit)="signIn()">
+  <div>
+    <input
+      placeholder="имя пользователя"
+      type="text"
+      [formControl]="login"
+    />
+  </div>
+
+  <div *ngIf="login.invalid && login.touched; else other_content"
+       class="alert">
+    <div *ngIf="login.errors?.['required']">
+      Ползовател не может бытб пустым
+    </div>
+  </div>
+  <ng-template #other_content>
+    <label class='alert-placeholder'> </label>
+  </ng-template>
+
+  <div>
+    <input
+      placeholder="пароль"
+      type="password"
+      [formControl]="password"
+    />
+  </div>
+
+  <div *ngIf="password.invalid && password.touched; else other_content"
+       class="alert">
+    <div *ngIf="password.errors?.['required']">
+      Парол не можэт ы пустым
+    </div>
+  </div>
+
+
+  <div *ngIf="loginError"
+       class="alert">
+    {{ loginErrorMessage }}
+  </div>
+
+  <div *ngIf="registrationSuccess" class="success">
+    Регистрация прошла успешно, теперь можно входитб.
+  </div>
+
+
+  <button type="submit">Войти</button>
+  <button type="button" (click)="signUp()">Зарегистрироваться</button>
+</form>

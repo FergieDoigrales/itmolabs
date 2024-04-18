@@ -1,0 +1,21 @@
+<form class="main_form" (ngSubmit)='submit()'>
+  <div [ngClass]="{'error-hovered' : x.invalid && x.touched, 'hovered': !(x.invalid && x.touched)}">
+    <label>
+      <span class="letter-label">X: </span>
+      <input type="text" name="x" placeholder="(-5...5)" [formControl]="x">
+    </label>
+  </div>
+  <div [ngClass]="{'error-hovered' : y.invalid && y.touched, 'hovered': !(y.invalid && y.touched)}">
+    <label>
+      <span class="letter-label">Y: </span>
+      <input type="text" name="y" placeholder="(-3...5)" [formControl]="y">
+    </label>
+  </div>
+  <div [ngClass]="{'error-hovered' : r.invalid && r.touched, 'hovered': !(r.invalid && r.touched)}">
+    <label>
+      <span class="letter-label">R: </span>
+      <input type="text" name="r" placeholder="(-5...5)" [formControl]="r" (change)="changeRadius()">
+    </label>
+  </div>
+  <button type="submit" name="submit" class="submit-button">Проверить</button>
+</form>
