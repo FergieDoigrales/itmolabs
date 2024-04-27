@@ -1,23 +1,3 @@
-import sys
-import math
-from validator import input_variables
-
-def numerical_integration():
-
-    quation, method, a, b, e, parts = input_variables()
-    switch_command = {
-        1: Rectangle_method_left,
-        2: Rectangle_method_centre,
-        3: Rectangle_method_right,
-        4: trapezoidal_method,
-        5: simpson_method,
-        6: exit,
-    }
-    switch_command.get(method, exit)(
-        quation, a, b, e, parts
-    )
-
-
 def rectangle_method_left(quation, a, b, e, parts):
     I = 99999
     answer = []

@@ -38,13 +38,13 @@ class Ui_MainWindow(object):
 "color: rgb(255, 162, 199);\n"
 "gridline-color: rgb(255, 128, 196);\n"
 "\n"
-"background-image: url(C:/Users/Fergie/Desktop/VM_LAB3/resources/cats.jpg);")
+"background-image: url(resources/cats.jpg);")
         self.Main_list_widget.setFrameShadow(QtWidgets.QFrame.Plain)
         self.Main_list_widget.setLineWidth(0)
         self.Main_list_widget.setObjectName("Main_list_widget")
         self.ButtonBar = QtWidgets.QFrame(self.centralwidget)
         self.ButtonBar.setGeometry(QtCore.QRect(20, 350, 251, 81))
-        self.ButtonBar.setStyleSheet("background-image: url(C:/Users/Fergie/Desktop/VM_LAB3/resources/pink.jpg); ")
+        self.ButtonBar.setStyleSheet("background-image: url(resources/pink.jpg); ")
         self.ButtonBar.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.ButtonBar.setFrameShadow(QtWidgets.QFrame.Raised)
         self.ButtonBar.setObjectName("ButtonBar")
@@ -58,51 +58,51 @@ class Ui_MainWindow(object):
         self.Save_button.setObjectName("Save_button")
         self.inp_a = QtWidgets.QLineEdit(self.ButtonBar)
         self.inp_a.setGeometry(QtCore.QRect(20, 20, 41, 21))
-        self.inp_a.setStyleSheet("background: url(C:/Users/Fergie/Desktop/VM_LAB3/resources/cats.jpg);")
+        self.inp_a.setStyleSheet("background: url(resources/cats.jpg);")
         self.inp_a.setObjectName("inp_a")
         self.inp_b = QtWidgets.QLineEdit(self.ButtonBar)
         self.inp_b.setGeometry(QtCore.QRect(80, 20, 41, 21))
-        self.inp_b.setStyleSheet("background: url(C:/Users/Fergie/Desktop/VM_LAB3/resources/cats.jpg);")
+        self.inp_b.setStyleSheet("background: url(resources/cats.jpg);")
         self.inp_b.setObjectName("inp_b")
         self.inp_e = QtWidgets.QLineEdit(self.ButtonBar)
         self.inp_e.setGeometry(QtCore.QRect(140, 20, 41, 21))
-        self.inp_e.setStyleSheet("background: url(C:/Users/Fergie/Desktop/VM_LAB3/resources/cats.jpg);")
+        self.inp_e.setStyleSheet("background: url(resources/cats.jpg);")
         self.inp_e.setObjectName("inp_e")
         self.label_prompt = QtWidgets.QLabel(self.ButtonBar)
         self.label_prompt.setGeometry(QtCore.QRect(10, 0, 301, 16))
-        self.label_prompt.setStyleSheet("background-image: url(C:/Users/Fergie/Desktop/pink.jpg);")
+        self.label_prompt.setStyleSheet("background-image: url(resources/pink.jpg);")
         self.label_prompt.setObjectName("label_prompt")
         self.prompt_a = QtWidgets.QLabel(self.ButtonBar)
         self.prompt_a.setGeometry(QtCore.QRect(10, 20, 16, 20))
-        self.prompt_a.setStyleSheet("background-image: url(C:/Users/Fergie/Desktop/pink.jpg);\n"
+        self.prompt_a.setStyleSheet("background-image: url(resources/pink1.jpg);\n"
 "font: 8pt \"Ravie\";\n"
 "color:rgb(255, 162, 199);")
         self.prompt_a.setObjectName("prompt_a")
         self.prompt_b = QtWidgets.QLabel(self.ButtonBar)
         self.prompt_b.setGeometry(QtCore.QRect(70, 20, 16, 20))
-        self.prompt_b.setStyleSheet("background-image: url(C:/Users/Fergie/Desktop/pink.jpg);\n"
+        self.prompt_b.setStyleSheet("background-image: url(resources/pink1.jpg);\n"
 "font: 8pt \"Ravie\";\n"
 "color:rgb(255, 162, 199);")
         self.prompt_b.setObjectName("prompt_b")
         self.prompt_c = QtWidgets.QLabel(self.ButtonBar)
         self.prompt_c.setGeometry(QtCore.QRect(130, 20, 16, 16))
-        self.prompt_c.setStyleSheet("background-image: url(C:/Users/Fergie/Desktop/pink.jpg);\n"
+        self.prompt_c.setStyleSheet("background-image: url(resources/pink1.jpg);\n"
 "font: 8pt \"Ravie\";\n"
 "color:rgb(255, 162, 199);")
         self.prompt_c.setObjectName("prompt_c")
         self.inp_p = QtWidgets.QLineEdit(self.ButtonBar)
         self.inp_p.setGeometry(QtCore.QRect(200, 20, 41, 21))
-        self.inp_p.setStyleSheet("background:url(C:/Users/Fergie/Desktop/VM_LAB3/resources/cats.jpg);")
+        self.inp_p.setStyleSheet("background:url(resources/cats.jpg);")
         self.inp_p.setObjectName("inp_p")
         self.prompt_c_2 = QtWidgets.QLabel(self.ButtonBar)
         self.prompt_c_2.setGeometry(QtCore.QRect(190, 20, 16, 16))
-        self.prompt_c_2.setStyleSheet("background-image: url(C:/Users/Fergie/Desktop/pink.jpg);\n"
+        self.prompt_c_2.setStyleSheet("background-image: url(resources/pink1.jpg);\n"
 "font: 8pt \"Ravie\";\n"
 "color:rgb(255, 162, 199);")
         self.prompt_c_2.setObjectName("prompt_c_2")
         self.menu_box = QtWidgets.QGroupBox(self.centralwidget)
         self.menu_box.setGeometry(QtCore.QRect(20, 60, 251, 281))
-        self.menu_box.setStyleSheet("background-image: url(C:/Users/Fergie/Desktop/VM_LAB3/resources/pink.jpg);")
+        self.menu_box.setStyleSheet("background-image: url(resources/pink.jpg);")
         self.menu_box.setTitle("")
         self.menu_box.setObjectName("menu_box")
         self.choise_factory_label = QtWidgets.QLabel(self.menu_box)
@@ -118,7 +118,7 @@ class Ui_MainWindow(object):
         self.stackedWidget = QtWidgets.QStackedWidget(self.menu_box)
         self.stackedWidget.setGeometry(QtCore.QRect(20, 50, 201, 221))
         self.stackedWidget.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
-        self.stackedWidget.setStyleSheet("background: url(C:/Users/Fergie/Desktop/VM_LAB3/resources/pink.jpg);")
+        self.stackedWidget.setStyleSheet("background: url(resources/pink.jpg);")
         self.stackedWidget.setObjectName("stackedWidget")
         self.single_eq_page = QtWidgets.QWidget()
         self.single_eq_page.setObjectName("single_eq_page")
@@ -182,12 +182,12 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.method_page)
         self.answer_box = QtWidgets.QGroupBox(self.centralwidget)
         self.answer_box.setGeometry(QtCore.QRect(280, 60, 281, 371))
-        self.answer_box.setStyleSheet("background-image: url(C:/Users/Fergie/Desktop/VM_LAB3/resources/pink.jpg); ")
+        self.answer_box.setStyleSheet("background-image: url(resources/pink.jpg); ")
         self.answer_box.setTitle("")
         self.answer_box.setObjectName("answer_box")
         self.answer_widget = QtWidgets.QFrame(self.answer_box)
         self.answer_widget.setGeometry(QtCore.QRect(20, 60, 241, 101))
-        self.answer_widget.setStyleSheet("background-image:url(C:/Users/Fergie/Desktop/VM_LAB3/resources/white.jpg);")
+        self.answer_widget.setStyleSheet("background-image:url(resources/white.jpg);")
         self.answer_widget.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.answer_widget.setFrameShadow(QtWidgets.QFrame.Raised)
         self.answer_widget.setObjectName("answer_widget")
@@ -238,7 +238,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("PawSolver", "PawSolver"))
         self.load_button.setText(_translate("MainWindow", "Load file"))
         self.Save_button.setText(_translate("MainWindow", "Save to"))
         self.label_prompt.setText(_translate("MainWindow", "Enter the range, inaccuracy and value of parts"))

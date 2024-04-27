@@ -2,19 +2,10 @@ import design
 import solver
 import validator
 import sys
-from PyQt5 import QtWidgets
-import numpy  as np
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.figure import Figure
-from scipy.optimize import fsolve
-from PyQt5.QtWidgets import QMessageBox
-from PyQt5.QtWidgets import QFileDialog
-import sys
-from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QMovie
-from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QVBoxLayout
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import  QLabel, QMessageBox, QFileDialog
 
 
 
@@ -22,36 +13,17 @@ class App(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
         self.main_ui = design.Ui_MainWindow()
-        self.main_ui.setupUi(self)  # Initialize the GUI design setup from design.py
+        self.main_ui.setupUi(self)  
 
 
-        #получение данных
         self.a = self.main_ui.inp_a.text().replace(',','.')
         self.b =  self.main_ui.inp_b.text().replace(',','.')
         self.e = self.main_ui.inp_e.text().replace(',','.')
         self.p = self.main_ui.inp_p.text().replace(',','.')
 
-    
-        #equ = self.get_selected_radio_value_method()
-        
-    
-
-        
-        # # Если графика еще нет, то создать слой
-        # if self.main_ui.giph_widget.layout() is None:
-        #     layout = QtWidgets.QVBoxLayout(self.main_ui.giph_widget)  # QVBoxLayout can be changed as needed
-        #     self.main_ui.giph_widget.setLayout(layout)
-
-        # self.movie = QMovie("C:\Users\Fergie\Desktop\VM_LAB3\resources")
-        # self.label = QLabel(self)
-        # self.label.setAlignment(Qt.AlignCenter)
-        # self.label.setMovie(self.movie)
-        # self.movie.start()
-
-        # self.main_ui.giph_widget.layout().addWidget(self.movie)  # Add the canvas to the graph_widget's layout
         
         if self.main_ui.giph_widget.layout() is None:
-            layout = QtWidgets.QVBoxLayout(self.main_ui.giph_widget)  # QVBoxLayout можно изменить по необходимости
+            layout = QtWidgets.QVBoxLayout(self.main_ui.giph_widget)  
             self.main_ui.giph_widget.setLayout(layout)
 
         self.movie = QMovie("resources/dance.gif")
@@ -179,9 +151,7 @@ class App(QtWidgets.QMainWindow):
 
 
         
-    
 
-# Setup PyQt application
 app = QtWidgets.QApplication(sys.argv)
 main = App()
 main.show()
