@@ -1,4 +1,16 @@
 import numpy as np
+
+def integrand(quation, x):
+    if quation == 1:
+         return x**2       
+    if quation == 2:
+        return np.sin(x)
+    if quation == 3:
+        try:
+            return 1 / x
+        except ZeroDivisionError:
+            return "Infinity breaking point at x"
+        
 def rectangle_method_left(quation, a, b, e, parts):
     integral = 99999
     answer = []
@@ -149,14 +161,3 @@ def simpson_method(quation, a, b, e, parts):
     else:
         return "The integral doesn't converge."
 
-
-def integrand(quation, x):
-    if quation == 1:
-         return x**2       
-    if quation == 2:
-        return np.sin(x)
-    if quation == 3:
-        try:
-            return 1 / x
-        except ZeroDivisionError:
-            return "Infinity breaking point at x"
